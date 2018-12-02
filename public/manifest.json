@@ -1,0 +1,26 @@
+{
+	"name": "Donation",
+	"short_name": "Donation Startup",
+	"description": "Donation Web-App",
+	"start_url": "./index.html?utm=homescreen",
+	"display": "standalone",
+	"orientation": "portrait",
+	"background_color": "#5b2b82",
+	"theme_color": "#29434d",
+	"gcm_sender_id": "103953800507",
+	"icons": [
+		{
+			"src": "./images/icons/android-chrome-192x192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "./images/icons/android-chrome-512x512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	]
+
+}
+
+

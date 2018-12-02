@@ -1,0 +1,72 @@
+.nav, .nav ul, .nav li {
+    list-style: none;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0 0 0 18px;
+}
+
+.nav {
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav > li {
+    margin: 17px 0;
+    margin-right: 18px;
+}
+
+.nav > li li {
+    margin: 2px 0;
+}
+
+.nav a {
+    color: #333;
+    display: block;
+    outline: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.nav li > a > span {
+    float: right;
+    font-size: 19px;
+    font-weight: bolder;
+}
+
+.nav li > a:hover > span {
+    color: #fff;
+}
+
+.nav li > a > span:after {
+    content: '\25be';
+}
+.nav li.open > a > span:after {
+    content: '\25b4';
+}
+
+.nav a:hover, .nav li.active > a {
+    color: #ff8000;
+}
+
+
+.nav li a {
+    font-size: 12px;
+    line-height: 10px;
+    padding: 2px 10px;
+}
+.footer{
+    margin-right: 33px;
+    font-size: 12px;
+    line-height: 30px;
+    padding: 2px 10px;
+}
+
+.nav > li > a {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 2px 10px;
+}

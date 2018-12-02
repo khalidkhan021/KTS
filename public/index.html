@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Donate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv=X-UA-Compatible content="IE=edge">
+  <meta name=description content="Donate">
+  <!-- <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=1.0"> -->
+  <meta name="theme-color" content="#29434d">
+  <meta name="msapplication-TileColor" content="#29434d">
+  <meta name="msapplication-TileImage" content="./images/icons/mstile-150x150.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Donate">
+  <meta name="application-name" content="Donate">
+  <link rel="apple-touch-icon" href="./images/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="./images/icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./images/icons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700">
+  <link rel="stylesheet" href="./css/styles.css">
+
+
+  <link rel="stylesheet" type="text/css" href="css/sidebarMenu.css" media="screen" />
+
+
+          
+      
+      <style>
+.loading {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999999;
+  overflow: hidden;
+  background: #fff;
+}
+
+      </style>
+
+</head>
+
+<body id='top'>
+  <div class="app app__layout" >
+    <header>
+      <!-- toggle icon -->
+      <span class="header__icon" id="toggle">
+        <svg class="menu__icon no--select" width="24px" height="24px" viewBox="0 0 48 48" fill="#fff">
+          <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>
+        </svg>
+  
+      </span>
+      <img class="header__title" src="images/icons/meunIcon.png" alt="">
+      <p class="header__title no--select"> Donation Startup</p>
+    </header>
+    <div id="login-btn" class="spinner" style="display: none;">
+      <button> <a href="pages/login.html">Login|Sigin</a></button>
+    </div>
+    <div class="menu nav" id="menuSide">
+            
+             <div class="menu__header" id="navbar">
+                <img class="img" onclick="sidermenuBack()" src="images/left-arrow.png" alt="left-arrow">
+                <img  class="img-child" src="images/icons/donate-sider.png" alt="/donate-sider" >
+                        <span  class="login-child">
+                            <div class="dropdown">
+                              <button class="dropbtn">Profile</button>
+                              <div class="dropdown-content">
+                                <a href="pages/login.html">Login|Sigin</a>
+                                <a onclick="logOut()">Logout</a>
+                              </div>
+                            </div>
+                        </span>
+
+             </div> 
+          <div>
+             <ul id="demo1" class="nav">
+                <li>
+                  <a href="#">About us</a>
+                </li>
+                <li>
+                  <a href="#">Term and Condition</a>
+                </li>
+                  <li>
+                    <a  title="Saylani Batch-5 Student" href="#">Design and Copyright-2018</a>
+                  </li>
+             </ul>
+      
+          </div>
+    </div> 
+ <div class="menu__overlay"></div> 
+      <div class="yoyo">
+        <div class="header-flex">
+          <div class="hf1">
+            
+                      <select name="categories" class="select" id="search">
+                        <option value="Dollar-0">Dollar-0</option>
+                        <option value="Dollar-1">Dollar-1</option>
+                        <option value="Dollar-2">Dollar-2</option>
+                      </select>
+            <button onclick="getServices()">Search</button>
+          </div class="secMenu">
+        <div class="hf2">
+                <div class="dropdown">
+                  <button class="dropbtn">Profile</button>
+                  <div class="dropdown-content">
+                    <a href="pages/login.html">Login|Sigin</a>
+                    <!-- <a  onclick='getFav()'>Ads fav</a>
+                    <a onclick='deleteFavAd()'>Delete Fav-Ad</a> -->
+                    <a onclick="logOut()">Logout</a>
+                  </div>
+                </div>
+        </div>
+
+          <div class="hf3"><button><a href="../pages/submitAd.html">Post</a></button></div>  
+        </div>
+         
+        
+            <div id="uorder" >
+                    <div class="card">
+                      <img src="images/cpoliceAttack.png" alt="Avatar" style="width:90%">
+                      <p>
+                        <button class="btn4">Donate here</button>
+                      </p>
+                    </div>
+                  
+
+         </div>
+
+      <div id="loaderr" class="spinner" style="display: none;">
+        <img src="images/load.gif" alt="loader">
+      </div>
+      <!-- Toast msg -->
+      <div class="toast__msg"></div>
+    </div>
+  </div>
+
+  <div class="fab fab__push">
+    <div class="fab__ripple"></div>
+    <a href='#top'><img class="fab__image" src="./images/gotoTop.png" alt="gotoTop" /></a>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+  <!-- JS Files  -->
+  <script src="./js/toast.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/offline.js"></script>
+  <script src="./js/menu.js"></script>
+  <script src="./js/jquery-1.10.2.min.js"></script>
+  <script src="./js/jquery.navgoco.js"></script>
+  <script src="./js/authAnd.js"></script> 
+    
+
+
+
+
+</body>
+
+</html>
